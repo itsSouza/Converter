@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="Libras">Em Libras</string>
+    <string name="Quilos">Em Quilos</string>
+    <string name="kg">Kg 0</string>
+    <string name="lbs">50.5</string>
+    <string name="calcular">Calcular</string>
+</resources>
