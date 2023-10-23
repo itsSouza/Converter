@@ -5,7 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@color/white"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_exp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/explicacao"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"/>
 
 
 
@@ -15,7 +29,9 @@
         android:layout_height="wrap_content"
         android:text="@string/Libras"
         android:textSize="32sp"
-       app:layout_constraintTop_toTopOf="parent"
+        android:textAllCaps="true"
+        android:textStyle="italic"
+        app:layout_constraintTop_toTopOf="@id/txt_exp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="180dp"/>
@@ -45,10 +61,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:hint="5.5"
+        android:textSize="30sp"
+        android:textColorHint="@color/black"
         android:inputType="numberDecimal"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@id/txt_question" />
 
     <TextView
@@ -57,6 +76,8 @@
         android:layout_height="wrap_content"
         android:text="@string/Quilos"
         android:textSize="32sp"
+        android:textAllCaps="true"
+        android:textStyle="italic"
         app:layout_constraintTop_toBottomOf="@id/edt_lbs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,9 +108,8 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-
         android:textSize="32sp"
-        android:textColor="#FF9800"
+        android:textColor="@color/black"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +125,8 @@
         android:layout_marginBottom="24dp"
         android:text="@string/calcular"
         android:textSize="24sp"
-        android:backgroundTint="#FF9800"
+        android:textColor="@color/yelow"
+        android:backgroundTint="@color/black"
         />
 
 

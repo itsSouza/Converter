@@ -34,7 +34,7 @@
 
                val lbsToKg = lbs * kg
 
-               quilos.text = "Kg ${"%.2f".format(lbsToKg)}"
+               quilos.text = "${"%.2f".format(lbsToKg)}"
            }
 
         }
