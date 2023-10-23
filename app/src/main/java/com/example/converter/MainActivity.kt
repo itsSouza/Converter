@@ -1,43 +1,43 @@
-package com.example.converter
+    package com.example.converter
+    
+    import androidx.appcompat.app.AppCompatActivity
+    import android.os.Bundle
+    import android.view.View
+    import android.widget.Button
+    import android.widget.EditText
+    import android.widget.TextView
+    import android.widget.Toast
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
-import com.example.converter.databinding.ActivityMainBinding
+    
+    class MainActivity : AppCompatActivity() {
+        private val kg = 0.45f
+        private lateinit var libras: EditText
+        private lateinit var quilos: TextView
+        private lateinit var btCalculo: Button
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
-    private val kg = 0.45f
-    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
+        libras = findViewById(R.id.edt_lbs)
+        quilos = findViewById(R.id.txt_kg)
+        btCalculo = findViewById(R.id.bt_calculate)
 
-        binding.btCalculate.setOnClickListener(this)
-    }
-
-    override fun onClick(view: View) {
-       if (view.id == R.id.bt_calculate){
-          calculate()
-       }
-    }
-
-    private fun calculate(){
-
-            var lbs = binding.edtLbs.text.toString().toFloat()
-            var librasToKg: Float = lbs * kg
-
-            binding.txtKg.text = "Kg ${"%.2f".format(librasToKg)}"
-
-
+        btCalculo.setOnClickListener { calculate() }
 
     }
+
+        private fun calculate(){
+           val lbs = libras.text.toString().toFloat()
+           if (lbs != 0f){
+
+               val lbsToKg = lbs * kg
+
+               quilos.text = "Kg ${"%.2f".format(lbsToKg)}"
+           }
+
+        }
 
 
 
